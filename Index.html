@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <!-- CoderX -->  <!--○●○●○●○●○●○●○●-->
+<style type="text/css" media="all">
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+body{
+  background: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.loader{
+ width: 100%;
+ height: 100vh;
+ background: rgb(131, 58,180);
+ background:#262626;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+}
+.ring{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:8px solid #000;
+  border-radius: 50%;
+  position: relative;
+}
+.ring:after{
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+border:6px solid #3FDADA;
+border-radius: 50%;
+border-top-color: transparent;
+ animation: rotate 1.2s linear infinite; 
+}
+@keyframes rotate{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+h1{
+  color: white;
+  padding: 10px;
+  border:2px solid white;
+  border-radius: 5px;
+  font-family: monospace;
+}
+pre{
+  color: white;
+  margin: 3px;
+  
+}
+</style>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="ring">
+      <pre>
+        
+        
+        
+        
+      
+        
+   Sahifa yuklanmoqda...
+      </pre>
+    </div>
+    </div>
+  <div class="">
+    <h1 onclick="console.log('its working')">CoderX|Group</h1>
+    <pre>
+ Copyright 2021
+    </pre>
+  </div>
+  </div>
+  <script>
+  console.log('Hello World!');
+window.addEventListener('DOMContentLoaded',() =>{
+  const loader = document.querySelector('.loader')
+  setTimeout( ()=> {
+  loader.style.opacity = '1' 
+  setTimeout( ()=>{
+    loader.style.display = 'none'
+  },500)
+  },4000)
+})
+  </script>
+</body>
+</html>
